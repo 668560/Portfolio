@@ -1,0 +1,5 @@
+Dette er et program som skal la deg administrere en liten bedrift sine ansatte.
+Via en meny kan du velge hva du ønsker å gjøre. Du kan blant annet legge til en ansatt, fjerne en ansatt
+oppdatere lønn og hente ut info om ansatte. 
+
+Dette programmet er satt opp mot pgadmin og sql tabeller. 
