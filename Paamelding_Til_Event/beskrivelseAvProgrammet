@@ -1,0 +1,22 @@
+Dette er et program som gir mulighet for påmelding til et kurs/event el. Man fyller ut et påmeldingsskjema på nettet 
+dette skjemaet har validering for blant annet obligatorisk fornavn, etternavn og mobil input. 
+
+Etter vellykket påmelding blir man videresendt til et nytt view hvor man får påmeldingsbekretelse som 
+inneholder innsendt informasjon. Man kan så velge å gå videre til å se deltagerlisten. 
+Deltagerlsiten fremtilles i et nytt view. Deltagerne blir presentert i en tabell med navn, kjønn og tlfnr.
+Din egen påmelding vil være fremhevet i grønt. 
+Man kan derfra velge å logge ut. Logger man ut kommer man tilbake til en innloggingsside. 
+
+All brukerinput valideres i både nettleser/klient og på tjener. Validering på tjenren skirer at dataene som mottas
+og lagres i databasen er gyldige. Det kvalitetsikrer at mobilnr er 8 siffer og at det ikke er registrert tidligere av en annen deltager
+Det krever også at passordet er minst 4 tegn langt (holdt kravet kort og uten spesialtegn i testfasen, burde sikrer bedre senere).
+Passord som oppgis og det repeterte passord må være likt. 
+Ved ugyldig data vil det komme opp en feilmelding som beskriver problemet. 
+
+Passord er sikret ved bruk av både hashing og salting.
+
+
+Applikasjonen har spring MVC, spring Boot som rammeverk. Applikasjonen er programmert med både java, javascript, html og css.
+Databasen er laget i PostgreSQL-databasen i pgAdmin og detalgerlisten (tabellen) er skrevet med sql. 
+
+Det er laget en liten enhetstest til programmet som sjekker at valideringsmetodene fungerer som de skal.   
