@@ -11,4 +11,4 @@ Den lar deg også registrere salg og kjøp, samt at den gir deg en oversikt over
 Via en meny kan du velge hva du ønsker å gjøre. Du kan blant annet legge til en ansatt, fjerne en ansatt
 oppdatere lønn og hente ut info om ansatte. Dette programmet er satt opp mot pgadmin og sql tabeller. 
 
--DiningAI er en applikasjon som lar deg rate resturanter basert på allergivennlighet. Du kan registrer ny resturantanmeldelse, hente frem scor fra ulike resturanter (bruke postkode) og 
+-DiningAI er en applikasjon som lar deg rate resturanter basert på allergivennlighet. Du kan registrer ny resturantanmeldelse, hente frem scor fra ulike resturanter (bruke postkode).. NB Ikke ferdig
