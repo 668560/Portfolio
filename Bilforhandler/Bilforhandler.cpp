@@ -20,7 +20,7 @@ void TotalProfit(int* buyprice, int* sellprice, int n){ //int n er antall biler 
     int profit=0;
    
     for(int i=0; i<n; i++){
-        profit += (sellprice[i]>0)? (sellprice[i]-buyprice[i]):0;
+        profit += (sellprice[i]-buyprice[i]);
     }
     wcout<<L"Total profit on sales: " <<profit << endl;
 }
@@ -55,18 +55,20 @@ int sellprice[1000];
 int choice = 0;
 int idx = 0;
 
+
 do{
+    int nr, buy, sell;
 wcout << endl << L"List of choices" << endl;
 wcout << L"1 Buy a car" << endl;
 wcout << L"2 Sell a car" << endl;
 wcout << L"3 Find the profit" << endl;
 wcout << L"4 List all the cars" << endl;
-wcout << L"5 Cleanup list (remove sold cars)" << endl;
+wcout << L"5 Cleanup list " << endl;
 wcout << L"0 Quit" << endl;
 wcin >> choice;
 
 switch (choice){
-int nr, buy, sell;
+
 case 1: BuyCar(&nr, &buy);
 carnr[idx] = nr;
 buyprice[idx] = buy;
@@ -79,11 +81,11 @@ sellprice[idx]=sell;
 buyprice[idx]=0;
 idx--;
 break;
-case 3: TotalProfit(&buy, &sell, nr);
+case 3: TotalProfit(buyprice, sellprice, idx);
 break;
 case 4: ListCars(carnr, buyprice, idx);
 break;
-case 5: CleanUpList(&nr, &buy, &sell, idx);
+case 5: CleanUpList(carnr, buyprice, sellprice, idx);
 }
 } 
 while (choice != 0);
